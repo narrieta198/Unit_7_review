@@ -22,25 +22,91 @@
 
 
 /* General Flex Styles */
+body{
+   display: -webkit-flex;
+   display: flex;
 
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+}
 
+section#left{
+    flex: 1 8 130px;
+  }
+  section#right{
+    flex: 8 1 351px;
+  }
 
+section.tips{
+    display: -webkit-flex;
+    display: flex;
 
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+ }
 
+ article{
+    flex: 2 1 351px;
+ }
 
+ aside{
+     flex: 1 2 250px;
+ }
+
+ nav.horizontal ul{
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+ }
+ 
 /* ===============================
 	Mobile Devices: 0 to 480px 
    ===============================
 */
-	
+@media only screen and (max-width: 480px) {
+   nav.vertical ul{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    height: 240px;
+    }
 
+   section#left{
+    -ms-flex-order: 99;
+    order: 99;
+    }
 
+   footer{
+    -webkit-order: 100;
+    order: 100;
+    }
+
+    a#navicon{
+        display: block;
+    }
+
+    nav.horixontal ul{
+        display:none;
+    }
+
+    a#navicon:hover+ul, nav.horizontal ul:hover{
+       display: block;
+    }
+}
+  
 
 
 /* ============================================
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
-
+@media only screen and (min-width: 481px){
+   nav.horizontal ul{
+      height: 160px;
+   }
+}
 
 

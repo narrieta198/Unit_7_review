@@ -18,25 +18,69 @@
 
 
 /* Hidden Objects */
-
+nav, header h1, section#left, footer{
+   display: none;
+}
 
 
 /* Page Box Styles */
-
-
+@page{
+   size: 8.5in 11in;
+   margin: 0.5in;
+}
 
 /* Header Styles */
-
-
+img#logo{
+   display: block;
+   width: 100%;
+}
 
 /* Typography Styles */
+article header{
+   margin-bottom: 0.2in;
+}
 
+article h1{
+   font-size: 24pt;
+   line-height: 26pt;
+}
 
+aside{
+   background-color: rgb(211, 211, 211);
+   margin-top: 0.3in;
+}
 
+aside h1{
+   font-size: 18pt;
+   line-height: 20pt;
+}
+
+aside img{
+   width: 0.8in;
+}
+
+aside p{
+   font-size: 12pt;
+   margin-top: 0.1in;
+   margin-bottom: 0.1in;
+}
 /* Hypertext Styles */
-
-
+a{
+   text-decoration: none;
+   color: black;
+}
 
 
 /* Page Break Styles */
+aside{
+   page-break-after: auto;
+}
 
+ol, ul, img{
+   page-break-inside: avoid;
+}
+
+p{
+   widows: 3;
+   orphans: 3;
+}
